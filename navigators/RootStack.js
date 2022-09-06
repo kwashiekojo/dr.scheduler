@@ -5,15 +5,15 @@ import { Colors } from './../components/styles';
 const { darkLight, brand, primary, tertiary, secondary } = Colors;
 
 // React Navigation
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+  import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
-import Login from './../screens/Login';
-import Signup from './../screens/Signup';
-import Welcome from './../screens/Welcome';
+import Login from '../screens/Login';
+import Signup from '../screens/SignUp';
+import Welcome from '../screens/Welcome';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 // credentials context
 import { CredentialsContext } from './../components/CredentialsContext';
@@ -41,8 +41,8 @@ const RootStack = () => {
                 options={{
                   headerTintColor: primary,
                 }}
-                name="Welcome"
-                component={Welcome}
+                name="Login"
+                component={Login}
               />
             ) : (
               <>
